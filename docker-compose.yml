@@ -1,0 +1,40 @@
+version: "3.8"
+
+# Workaround to create a database volume in BitBucket pipeline test
+x-custom:
+  volumes:
+    - &dbdata ${BITBUCKET_CLONE_DIR:-dbdata}:/var/lib/mysql
+
+services:
+  astral-fpm:
+    build:
+      context: ./etc/fpm
+    container_name: astral-fpm
+    volumes:
+      - .:/var/www/app:cached
+    networks:
+      - astral_net
+
+  astral-db:
+    build:
+      context: ./etc/db
+    container_name: astral-db
+    ports:
+      - 3307:3306
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+      - *dbdata # dbdata:/var/lib/mysql
+    networks:
+      - astral_net
+
+networks:
+  astral_net:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local

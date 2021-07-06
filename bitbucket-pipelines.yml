@@ -1,0 +1,45 @@
+image: atlassian/default-image:2
+
+pipelines:
+  default:
+    - step:
+        name: Build or rebuild services
+        image: docker/compose:latest
+        script:
+          - export DB_DATABASE=astral
+          - export DB_PASSWORD=password
+          - docker-compose build
+        services:
+          - docker
+        caches:
+          - docker
+    - step:
+        name: Create and start containers
+        image: docker/compose:latest
+        script:
+          - export DB_DATABASE=astral
+          - export DB_PASSWORD=password
+          - docker-compose up -d
+        services:
+          - docker
+        caches:
+          - docker
+    - step:
+        name: Stop and remove containers, networks, images, and volumes
+        image: docker/compose:latest
+        script:
+          - docker-compose down
+        services:
+          - docker
+        caches:
+          - docker
+    - step:
+        name: Execute unit tests via PHPUnit
+        image: php:8
+        script:
+          - apt-get update && apt-get install -y unzip
+          - php -r "file_exists('.env') || copy('.env.example', '.env');"
+          - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+          - composer install
+          - vendor/bin/phpunit tests --no-coverage --colors=never --verbose --configuration=etc/build
+

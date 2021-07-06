@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="Astral\Domain\Card\Card" table="cards">
+        <id name="id" type="integer">
+            <generator strategy="AUTO"/>
+        </id>
+
+        <field name="color" column="color" type="string" length="100"/>
+        <field name="type" column="type" type="string" length="100"/>
+        <field name="suit" column="suit" type="string" length="100" nullable="true"/>
+        <field name="rank" column="rank" type="string" length="100" nullable="true"/>
+    </entity>
+</doctrine-mapping>
