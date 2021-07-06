@@ -11,7 +11,7 @@ TODO: Project description here
 
 ### Clone Repository
 
-$ `cd <projects-parent-directory> && git clone git@github.com:pascalallen/Astral.git`
+$ `cd <projects-parent-directory> && git clone git@github.com:pascalallen/astral.git`
 
 ### Copy & Modify .env File
 
