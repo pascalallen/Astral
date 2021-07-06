@@ -1,0 +1,4 @@
+/vendor
+.idea
+local_script.php
+/.env
