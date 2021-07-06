@@ -1,10 +1,10 @@
-name: PHP Composer
+name: PHP
 
 on:
   push:
-    branches: [ master ]
+    branches: [ develop ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, stage, develop ]
 
 jobs:
   build:
@@ -13,6 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
+    - name: Copy .env
+      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
@@ -29,8 +32,13 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
+    - name: Create Database
+      run: |
+        mkdir -p database
+        touch database/database.sqlite
 
-    # - name: Run test suite
-    #   run: composer run-script test
+    - name: Execute tests via PHPUnit
+      env:
+        DB_CONNECTION: sqlite
+        DB_DATABASE: database/database.sqlite
+      run: vendor/bin/phpuni
