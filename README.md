@@ -1,5 +1,8 @@
 # Astral
 
+![Docker Compose Build Status](https://github.com/pascalallen/Astral/workflows/Docker%20Compose/badge.svg)
+![PHP Build Status](https://github.com/pascalallen/Astral/workflows/PHP/badge.svg)
+
 TODO: Project description here
 
 ## Prerequisites
