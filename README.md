@@ -3,7 +3,7 @@
 ![Docker Compose Build Status](https://github.com/pascalallen/Astral/workflows/Docker%20Compose/badge.svg)
 ![PHP Build Status](https://github.com/pascalallen/Astral/workflows/PHP/badge.svg)
 
-Minimal PHP web development starter kit. Features include:
+Minimal PHP web development starter kit. Designed following the SOLID principles, CQRS, and DDD. Features include:
 
 - Build Pipelines for GitHub and BitBucket
 - Shell scripts for Composer, Doctrine, Docker, PHP, and PHPUnit
