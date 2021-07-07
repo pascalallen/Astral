@@ -5,11 +5,13 @@
 
 Minimal PHP web development starter kit. Designed following the SOLID principles, CQRS, and DDD. Features include:
 
+- Fully containerized application
 - Build Pipelines for GitHub and BitBucket
 - Shell scripts for Composer, Doctrine, Docker, PHP, and PHPUnit
 - Command Bus
 - Doctrine ORM
 - (Coming Soon) Logger
+- (Coming Soon) Queue
 - DI Container
 - Sample repository and interface
 - Sample command and handler
