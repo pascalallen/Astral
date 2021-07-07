@@ -3,7 +3,22 @@
 ![Docker Compose Build Status](https://github.com/pascalallen/Astral/workflows/Docker%20Compose/badge.svg)
 ![PHP Build Status](https://github.com/pascalallen/Astral/workflows/PHP/badge.svg)
 
-TODO: Project description here
+Minimal PHP web development starter kit. Features include:
+
+- Build Pipelines for GitHub and BitBucket
+- Shell scripts for Composer, Doctrine, Docker, PHP, and PHPUnit
+- Command Bus
+- Doctrine ORM
+- (Coming Soon) Logger
+- DI Container
+- Sample repository and interface
+- Sample command and handler
+- (Coming Soon) Sample query service dependency
+- Sample aggregates
+- (Coming Soon) API
+- (Coming Soon) React/TypeScript frontend
+- Code style config file
+- EditorConfig file
 
 ## Prerequisites
 
