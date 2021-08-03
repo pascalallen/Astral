@@ -9,6 +9,7 @@ Minimal PHP web development starter kit. Designed following the SOLID principles
 - Build Pipelines for GitHub and BitBucket
 - Shell scripts for Composer, Doctrine, Docker, PHP, Logs, and PHPUnit
 - Command Bus
+- (Coming Soon) Event Dispatcher
 - Doctrine ORM
 - Logger w/ streams to Papertrail and php://stdout
 - (Coming Soon) Queue
