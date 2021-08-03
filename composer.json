@@ -8,6 +8,7 @@
         "doctrine/cache": "^1.11",
         "doctrine/orm": "*",
         "league/tactician": "^1.1",
+        "monolog/monolog": "^2.3",
         "psr/container": "^2.0",
         "vlucas/phpdotenv": "^5.3"
     },
@@ -28,7 +29,8 @@
     },
     "config": {
         "platform": {
-            "php": "8.0.0"
+            "php": "8.0.0",
+            "ext-sockets": "8.0.0"
         },
         "optimize-autoloader": true,
         "preferred-install": {
