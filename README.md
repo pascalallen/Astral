@@ -7,10 +7,10 @@ Minimal PHP web development starter kit. Designed following the SOLID principles
 
 - Fully containerized application
 - Build Pipelines for GitHub and BitBucket
-- Shell scripts for Composer, Doctrine, Docker, PHP, and PHPUnit
+- Shell scripts for Composer, Doctrine, Docker, PHP, Logs, and PHPUnit
 - Command Bus
 - Doctrine ORM
-- (Coming Soon) Logger
+- Logger w/ streams to Papertrail and php://stdout
 - (Coming Soon) Queue
 - DI Container
 - Sample repository and interface
@@ -40,6 +40,10 @@ $ `cp .env.dist .env`
 ### Bring Up Environment
 
 $ `bin/up`
+
+### Tail Logs
+
+$ `bin/logs -f`
 
 ### Install Composer Dependencies
 

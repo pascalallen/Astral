@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     && pecl install xdebug \
     && docker-php-ext-enable xdebug \
+    && docker-php-ext-install sockets \
     && docker-php-ext-install pdo_mysql
 
 COPY ./conf/php.ini-development /usr/local/etc/php/php.ini
