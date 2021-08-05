@@ -9,7 +9,10 @@ use Astral\Adapter\Repository\Card\CardRepository;
 use Astral\Adapter\Repository\UnitOfWork;
 use Astral\Application\Command\SayHello;
 use Astral\Application\CommandHandler\SayHelloHandler;
+use Astral\Application\Event\SomethingHappened;
+use Astral\Application\Listener\DoSomething;
 use Astral\Application\Messaging\Command\CommandBusInterface;
+use Astral\Application\Messaging\Event\EventDispatcherInterface;
 use Astral\Application\Repository\UnitOfWorkInterface;
 use Astral\Domain\Card\CardRepositoryInterface;
 use Doctrine\ORM\EntityManager;
@@ -24,11 +27,11 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
 use Monolog\Logger;
 use Psr\Container\ContainerInterface;
-use Psr\EventDispatcher\EventDispatcherInterface;
 use Psr\Log\LoggerInterface;
 
 require dirname(__DIR__).'/config/bootstrap.php';
 
+$lockingMiddleware = new LockingMiddleware();
 $handlerMiddleware = new CommandHandlerMiddleware(
     new ClassNameExtractor(),
     new InMemoryLocator([
@@ -37,11 +40,8 @@ $handlerMiddleware = new CommandHandlerMiddleware(
     new HandleInflector()
 );
 
-$lockingMiddleware = new LockingMiddleware();
-
 $paths = [dirname(__DIR__)."/database/metadata"];
 $isDevMode = false;
-
 $dbParams = [
     'driver'   => $_ENV['DB_DRIVER'],
     'host'     => $_ENV['DB_HOST'],
@@ -50,11 +50,13 @@ $dbParams = [
     'password' => $_ENV['DB_PASSWORD'],
     'dbname'   => $_ENV['DB_DATABASE']
 ];
-
 $config = Setup::createXMLMetadataConfiguration(
     $paths,
     $isDevMode
 );
+
+$eventDispatcher = new EventDispatcher();
+$eventDispatcher->subscribeTo(SomethingHappened::class, new DoSomething());
 
 $services = [
     CommandBusInterface::class      => new CommandBus([$lockingMiddleware, $handlerMiddleware]),
@@ -80,7 +82,7 @@ $services = [
             Logger::DEBUG
         )
     ]),
-    EventDispatcherInterface::class => new EventDispatcher()
+    EventDispatcherInterface::class => $eventDispatcher
 ];
 
 return new Container($services);
