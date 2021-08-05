@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Astral\Application\CommandHandler;
 
-use Exception;
 use Astral\Application\Command\SayHello;
+use Exception;
 use Throwable;
 
 /**
@@ -22,15 +22,11 @@ final class SayHelloHandler
     {
         $name = $command->name();
 
-        try {
-            if (preg_match('~\d+~', $name)) {
-                $message = sprintf('Name must not contain numbers: %s', $name);
-                throw new Exception($message);
-            }
-
-            echo "Hello, $name!".PHP_EOL;
-        } catch (Throwable $e) {
-            throw $e;
+        if (preg_match('~\d+~', $name)) {
+            $message = sprintf('Name must not contain numbers: %s', $name);
+            throw new Exception($message);
         }
+
+        echo "Hello, $name!".PHP_EOL;
     }
 }
