@@ -37,7 +37,7 @@ $ `cd <projects-parent-directory> && git clone git@github.com:pascalallen/astral
 
 ### Copy & Modify .env File
 
-$ `cp .env.dist .env`
+$ `cp .env.example .env`
 
 ### Bring Up Environment
 
