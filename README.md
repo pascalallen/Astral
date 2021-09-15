@@ -12,7 +12,7 @@ Minimal PHP web development starter kit. Designed following the SOLID principles
 - Event Dispatcher
 - Doctrine ORM
 - Logger w/ streams to Papertrail and php://stdout
-- (Coming Soon) Queue
+- (Coming Soon) Worker Queue
 - DI Container
 - Sample repository and interface
 - Sample command and handler
