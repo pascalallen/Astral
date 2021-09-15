@@ -3,7 +3,7 @@
 ![Docker Compose Build Status](https://github.com/pascalallen/Astral/workflows/Docker%20Compose/badge.svg)
 ![PHP Build Status](https://github.com/pascalallen/Astral/workflows/PHP/badge.svg)
 
-Minimal PHP web development starter kit. Designed following the SOLID principles, CQRS, and DDD. Features include:
+Minimal PHP web development starter kit. Designed from scratch following the SOLID principles, CQRS, and DDD. Features include:
 
 - Fully containerized application
 - Build Pipelines for GitHub and BitBucket
