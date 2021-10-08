@@ -12,7 +12,7 @@ Minimal PHP web development starter kit. Designed from scratch following the SOL
 - Event Dispatcher
 - Doctrine ORM
 - Logger w/ streams to Papertrail and php://stdout
-- (Coming Soon) Queue
+- (Coming Soon) Worker Queue
 - DI Container
 - Sample repository and interface
 - Sample command and handler
@@ -37,7 +37,7 @@ $ `cd <projects-parent-directory> && git clone git@github.com:pascalallen/astral
 
 ### Copy & Modify .env File
 
-$ `cp .env.dist .env`
+$ `cp .env.example .env`
 
 ### Bring Up Environment
 
