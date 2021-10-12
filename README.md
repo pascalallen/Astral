@@ -21,11 +21,10 @@ patterns, and DDD. Features include:
 - (Coming soon) Sample action and responder
 - (Coming Soon) Sample query service dependency
 - Sample aggregates
-- Symfony HttpFoundation component
-- (Coming Soon) Symfony Routing component
+- (Coming Soon) Routing
 - (Coming Soon) Twig template engine
 - (Coming Soon) API
-- (Coming Soon) React/TypeScript frontend
+- (Coming Soon) React/TypeScript integration
 - Code style config file
 - EditorConfig file
 
@@ -39,6 +38,10 @@ patterns, and DDD. Features include:
 ### Clone Repository
 
 $ `cd <projects-parent-directory> && git clone git@github.com:pascalallen/astral.git`
+
+### Add Entry to `/etc/hosts` File
+
+$ `127.0.0.1       local.astral.com`
 
 ### Copy & Modify .env File
 
