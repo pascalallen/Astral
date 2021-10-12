@@ -13,6 +13,7 @@ Minimal PHP web development starter kit. Designed from scratch following the SOL
 - Doctrine ORM
 - Logger w/ streams to Papertrail and php://stdout
 - (Coming Soon) Worker Queue
+- Nginx Docker container
 - DI Container
 - Sample repository and interface
 - Sample command and handler
@@ -20,8 +21,7 @@ Minimal PHP web development starter kit. Designed from scratch following the SOL
 - (Coming soon) Sample action and responder
 - (Coming Soon) Sample query service dependency
 - Sample aggregates
-- (Coming Soon) Symfony ErrorHandler component
-- (Coming Soon) Symfony HttpFoundation component
+- Symfony HttpFoundation component
 - (Coming Soon) Symfony Routing component
 - (Coming Soon) Twig template engine
 - (Coming Soon) API

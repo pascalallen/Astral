@@ -11,6 +11,7 @@
         "league/tactician": "^1.1",
         "monolog/monolog": "^2.3",
         "psr/container": "^2.0",
+        "symfony/http-foundation": "^5.3",
         "vlucas/phpdotenv": "^5.3"
     },
     "require-dev": {
