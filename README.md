@@ -3,7 +3,8 @@
 ![Docker Compose Build Status](https://github.com/pascalallen/Astral/workflows/Docker%20Compose/badge.svg)
 ![PHP Build Status](https://github.com/pascalallen/Astral/workflows/PHP/badge.svg)
 
-Minimal PHP web development starter kit. Designed from scratch following the SOLID principles, the CQRS and ADR patterns, and DDD. Features include:
+Minimal PHP web development starter kit. Designed from scratch following the SOLID principles, the CQRS and ADR
+patterns, and DDD. Features include:
 
 - Fully containerized application
 - Build Pipelines for GitHub and BitBucket
@@ -20,12 +21,10 @@ Minimal PHP web development starter kit. Designed from scratch following the SOL
 - (Coming soon) Sample action and responder
 - (Coming Soon) Sample query service dependency
 - Sample aggregates
-- (Coming Soon) Symfony ErrorHandler component
-- (Coming Soon) Symfony HttpFoundation component
-- (Coming Soon) Symfony Routing component
+- (Coming Soon) Routing
 - (Coming Soon) Twig template engine
 - (Coming Soon) API
-- (Coming Soon) React/TypeScript frontend
+- (Coming Soon) React/TypeScript integration
 - Code style config file
 - EditorConfig file
 
@@ -39,6 +38,10 @@ Minimal PHP web development starter kit. Designed from scratch following the SOL
 ### Clone Repository
 
 $ `cd <projects-parent-directory> && git clone git@github.com:pascalallen/astral.git`
+
+### Add Entry to `/etc/hosts` File
+
+$ `127.0.0.1       local.astral.com`
 
 ### Copy & Modify .env File
 
