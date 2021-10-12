@@ -6,6 +6,35 @@ x-custom:
     - &dbdata ${BITBUCKET_CLONE_DIR:-dbdata}:/var/lib/mysql
 
 services:
+  astral-proxy:
+    build:
+      context: ./etc/proxy
+    container_name: astral-proxy
+    logging:
+      driver: none
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    networks:
+      - astral_net
+
+  astral-nginx:
+    build:
+      context: ./etc/nginx
+    container_name: astral-nginx
+    ports:
+      - "80"
+    env_file:
+      - ./etc/nginx/nginx.env
+    volumes:
+      - .:/var/www/app:cached
+    networks:
+      astral_net:
+        aliases:
+          - local.astral.com
+
   astral-fpm:
     build:
       context: ./etc/fpm
