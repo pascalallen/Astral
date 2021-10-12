@@ -20,9 +20,10 @@ Minimal PHP web development starter kit. Designed from scratch following the SOL
 - (Coming soon) Sample action and responder
 - (Coming Soon) Sample query service dependency
 - Sample aggregates
-- (Coming Soon) Object-oriented layer for the HTTP specification
-- (Coming Soon) Router
-- (Coming Soon) Template engine
+- (Coming Soon) Symfony ErrorHandler component
+- (Coming Soon) Symfony HttpFoundation component
+- (Coming Soon) Symfony Routing component
+- (Coming Soon) Twig template engine
 - (Coming Soon) API
 - (Coming Soon) React/TypeScript frontend
 - Code style config file
