@@ -15,7 +15,7 @@
         "vlucas/phpdotenv": "^5.3"
     },
     "require-dev": {
-        "codedungeon/phpunit-result-printer": "^0.30.1",
+        "codedungeon/phpunit-result-printer": "^0.31.0",
         "mockery/mockery": "^1.4",
         "phpunit/phpunit": "^9.5"
     },
