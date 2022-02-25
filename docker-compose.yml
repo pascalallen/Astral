@@ -10,8 +10,6 @@ services:
     build:
       context: ./etc/proxy
     container_name: astral-proxy
-    logging:
-      driver: none
     ports:
       - "80:80"
       - "443:443"

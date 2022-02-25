@@ -25,6 +25,8 @@ patterns, and DDD. Features include:
 - (Coming Soon) Twig template engine
 - (Coming Soon) API
 - (Coming Soon) React/TypeScript integration
+- (Coming Soon) Changelog
+- (Coming Soon) Release documentation
 - Code style config file
 - EditorConfig file
 

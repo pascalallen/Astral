@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f041fb6750d78a10aab9ca63e57cdaf0",
+    "content-hash": "05a8eb386ec5a4183f3e7ee3e11836d9",
     "packages": [
         {
             "name": "doctrine/cache",
@@ -1809,12 +1809,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2280,16 +2280,16 @@
         },
         {
             "name": "codedungeon/phpunit-result-printer",
-            "version": "0.30.1",
+            "version": "0.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikeerickson/phpunit-pretty-result-printer.git",
-                "reference": "a361009eeb7078c1478ba835976f7722a4952870"
+                "reference": "b04ebbc920062e29578ce34ac73b87f99190e65a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikeerickson/phpunit-pretty-result-printer/zipball/a361009eeb7078c1478ba835976f7722a4952870",
-                "reference": "a361009eeb7078c1478ba835976f7722a4952870",
+                "url": "https://api.github.com/repos/mikeerickson/phpunit-pretty-result-printer/zipball/b04ebbc920062e29578ce34ac73b87f99190e65a",
+                "reference": "b04ebbc920062e29578ce34ac73b87f99190e65a",
                 "shasum": ""
             },
             "require": {
@@ -2330,9 +2330,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mikeerickson/phpunit-pretty-result-printer/issues",
-                "source": "https://github.com/mikeerickson/phpunit-pretty-result-printer/tree/0.30.1"
+                "source": "https://github.com/mikeerickson/phpunit-pretty-result-printer/tree/0.31.0"
             },
-            "time": "2020-12-24T20:19:03+00:00"
+            "time": "2021-07-28T16:51:01+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
