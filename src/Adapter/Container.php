@@ -41,7 +41,7 @@ class Container implements ContainerInterface
     /**
      * Resolves a service
      */
-    private function resolve(string $id)
+    private function resolve(string $id): mixed
     {
         if ($this->services[$id] instanceof Closure) {
             $this->services[$id] = $this->services[$id]($this);
@@ -67,7 +67,7 @@ class Container implements ContainerInterface
     }
 
     /**
-     * Checks to see whether the service exists
+     * @inheritDoc
      */
     public function has(string $id): bool
     {

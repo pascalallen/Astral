@@ -47,6 +47,7 @@ services:
   astral-db:
     build:
       context: ./etc/db
+    platform: linux/amd64
     container_name: astral-db
     ports:
       - 3307:3306
