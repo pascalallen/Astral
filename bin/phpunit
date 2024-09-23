@@ -7,13 +7,13 @@ cd "$DIR"/.. || exit
 # add -c to turn on code coverage
 if [[ "$1" == "-c" ]]; then
     shift
-    docker-compose exec -u pascalallen astral-fpm php vendor/bin/phpunit tests \
+    docker compose exec -u pascalallen astral-fpm php vendor/bin/phpunit tests \
         --configuration etc/build \
         --coverage-html tests/reports \
         --cache-result-file tests/reports/.phpunit.result.cache \
         "$@"
 else
-    docker-compose exec -u pascalallen astral-fpm php vendor/bin/phpunit tests \
+    docker compose exec -u pascalallen astral-fpm php vendor/bin/phpunit tests \
         --configuration etc/build \
         --coverage-html tests/reports \
         --cache-result-file tests/reports/.phpunit.result.cache \

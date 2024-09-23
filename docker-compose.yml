@@ -1,5 +1,3 @@
-version: "3.8"
-
 # Workaround to create a database volume in BitBucket pipeline test
 x-custom:
   volumes:

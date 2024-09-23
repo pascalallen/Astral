@@ -2,15 +2,17 @@
 
 declare(strict_types=1);
 
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+use Astral\Application\Command\SayHello;
+use Astral\Application\Messaging\Command\CommandBusInterface;
+use Psr\Container\ContainerInterface;
 
 require dirname(__DIR__).'/config/bootstrap.php';
 
-$request = Request::createFromGlobals();
-$response = new Response(
-    'Content',
-    Response::HTTP_OK,
-    ['content-type' => 'text/html']
-);
-$response->send();
+/** @var ContainerInterface $container */
+$container = require dirname(__DIR__).'/bootstrap/app.php';
+
+/** @var CommandBusInterface $commandBus */
+$commandBus = $container->get(CommandBusInterface::class);
+
+$sayHelloCommand = new SayHello('World');
+$commandBus->handle($sayHelloCommand);

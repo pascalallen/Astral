@@ -4,4 +4,4 @@
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$DIR"/.. || exit
 
-docker-compose exec -u pascalallen astral-fpm php vendor/bin/doctrine "$@"
+docker compose exec -u pascalallen astral-fpm php vendor/bin/doctrine "$@"
