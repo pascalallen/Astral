@@ -7,6 +7,7 @@ Minimal PHP web development starter kit. Designed from scratch following the SOL
 patterns, and DDD. Features include:
 
 - Fully containerized application
+- Adminer DB GUI
 - Build Pipelines for GitHub and BitBucket
 - Shell scripts for Composer, Doctrine, Docker, PHP, Logs, and PHPUnit
 - Command Bus

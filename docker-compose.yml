@@ -59,6 +59,15 @@ services:
     networks:
       - astral_net
 
+  adminer:
+    image: adminer:4-standalone
+    container_name: astral-adminer
+    restart: always
+    ports:
+      - "8888:8080"
+    networks:
+      - astral_net
+
 networks:
   astral_net:
     driver: bridge
